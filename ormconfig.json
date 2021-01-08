@@ -1,0 +1,52 @@
+[
+    {
+        "name": "default",
+        "type": "mysql",
+        "host": "localhost",
+        "port": 3306,
+        "username": "orm_test",
+        "password": "orm_test",
+        "database": "orm_test",
+        "synchronize": true,
+        "logging": false,
+        "entities": [
+            "server/entity/*.ts"
+        ],
+        "migrations": [
+            "server/migration/**/*.ts"
+        ],
+        "subscribers": [
+            "server/subscriber/**/*.ts"
+        ],
+        "cli": {
+            "entitiesDir": "src/entity",
+            "migrationsDir": "src/migration",
+            "subscribersDir": "src/subscriber"
+        }
+    },
+    {
+        "name": "production",
+        "type": "mysql",
+        "host": "localhost",
+        "port": 3306,
+        "username": "orm_prod",
+        "password": "orm_prod",
+        "database": "orm_prod",
+        "synchronize": true,
+        "logging": false,
+        "entities": [
+            "database/entity/*.ts"
+        ],
+        "migrations": [
+            "database/migration/**/*.ts"
+        ],
+        "subscribers": [
+            "database/subscriber/**/*.ts"
+        ],
+        "cli": {
+            "entitiesDir": "src/entity",
+            "migrationsDir": "src/migration",
+            "subscribersDir": "src/subscriber"
+        }
+    }
+]
